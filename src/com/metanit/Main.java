@@ -44,7 +44,8 @@ public class Main {
         HighVolt highVolt = new HighVolt();
         Socket highSocket = new Socket(highVolt);
         highSocket.work();
-        SocketAdapter socketAdapter = new SocketAdapter(new LowVolt());
+        LowVolt lowVolt = new LowVolt();
+        SocketAdapter socketAdapter = new SocketAdapter(lowVolt);
         Socket lowSocket = new Socket(socketAdapter);
         lowSocket.work();
     }
